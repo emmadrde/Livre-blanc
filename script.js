@@ -35,13 +35,22 @@ document.getElementById("goToDownload").addEventListener("click", () => {
   smoothScrollTo(y, 1200);
 });
 
-
 /*
 ** Popup Management
 */
 const form = document.querySelector("downloadForm");
 const popup = document.getElementById("popup");
 
+function triggerDownload() {
+  const url = "https://drive.google.com/uc?export=download&id=1ojTksdnWxR4KLVsEY8-zN9p0jds7UtVc";
+
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = "livre-blanc.pdf";
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+}
 
 window.addEventListener("load", () => {
   const params = new URLSearchParams(window.location.search);
@@ -53,13 +62,8 @@ window.addEventListener("load", () => {
   }
 });
 
-function triggerDownload() {
-  const url = "https://drive.google.com/uc?export=download&id=XXXX";
-
-  const a = document.createElement("a");
-  a.href = url;
-  a.download = "livre-blanc.pdf";
-  document.body.appendChild(a);
-  a.click();
-  a.remove();
-}
+popup.addEventListener("click", (e) => {
+  if (e.target === popup) {
+    popup.classList.remove("active");
+  }
+});

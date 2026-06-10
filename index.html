@@ -54,6 +54,7 @@
 
     <div class="info-panel">
       <iframe
+        id="downloadForm"
         width="600px"
         height="500px"
         src="https://44a484e3.sibforms.com/v2/serve/MUIFANm-xE0sdvNyT1SuCD8aKGNlXEzHscytMMR2D7v0ynwUaicovZkR4GnhsA2Azb7vUwqXUwZ4-FBrnwUBUZ2xjKpwwofMW2ihKKPkvMvT3dVHzIZuMczlgylfY2J9MrB2hsZeUJul-mNjOpZxn3YpykFt3MvMgQ2bVlPCD8gYLXSbfJp2VCxLfNEK1cJT-It5t0PzKcFP9q_51g=="
@@ -100,15 +101,18 @@
 
     <div class="popup" id="popup">
       <div class="popup-content">
-        <p>Votre livre blanc est arrivé 📩</p>
-        <p>
-          Vous allez recevoir un email avec le lien de téléchargement dans
-          quelques instants. Pensez à vérifier vos spams si vous ne le voyez
-          pas.
-        </p>
-        <a id="download" href="#" download="livre-blanc.pdf"
-          >Ou télécharger directement ici</a
-        >
+        <p class="popup-thanks">MERCI !</p>
+        <div class="popup-content-instruction">
+          <p>Votre livre blanc est arrivé 📩</p>
+          <p>
+            Vous allez recevoir un email avec le lien de téléchargement dans
+            quelques instants. Pensez à vérifier vos spams si vous ne le voyez
+            pas.
+          </p>
+        </div>
+        <div class="downloadBtn" onclick="triggerDownload()">
+          <p>Ou télécharger directement ici</p>
+        </div>
       </div>
     </div>
 
