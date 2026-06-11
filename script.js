@@ -38,7 +38,7 @@ document.getElementById("goToDownload").addEventListener("click", () => {
 /*
 ** Popup Management
 */
-const form = document.querySelector("downloadForm");
+const form = document.querySelector("#downloadForm");
 const popup = document.getElementById("popup");
 
 function triggerDownload() {
@@ -63,7 +63,7 @@ window.addEventListener("load", () => {
 });
 
 popup.addEventListener("click", (e) => {
-  if (e.target === popup) {
+  if (e.target.classList.contains("popup")) {
     popup.classList.remove("active");
   }
 });
